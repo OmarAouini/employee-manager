@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/OmarAouini/employee-manager/constants"
+	"github.com/OmarAouini/employee-manager/web/middlewares"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
@@ -31,5 +32,5 @@ func configRoutes(r *chi.Mux) {
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
 		r.Response.StatusCode = 202
 	})
-	r.Get("/employees", GetAllEmployees)
+	r.Get("/employees", middlewares.Protected(GetAllEmployees))
 }

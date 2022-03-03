@@ -1,4 +1,4 @@
-package web
+package apiresponse
 
 //response handler wrapper
 type ApiResponse struct {
