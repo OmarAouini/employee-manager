@@ -40,5 +40,5 @@ func DupesCheck(list []string) map[string]int {
 }
 
 func PrintAppInfo(appName string, env string, dbname string, dbuser string, dbhost string, dbport string, idleConn int, maxConn int, host string, port string, brokersList []string, topicsList []string) {
-	fmt.Printf("\nAPP NAME: %s\nENV: %s\nDB NAME: %s\nDB USER: %s\nDB HOST: %s\nDB PORT: %s\nDB IDLE CONN: %d\nDB MAX CONN: %d\nHOST: %s\nPORT: %s\nKAFKA BROKERS:%v\nTOPICS:%v", appName, env, dbname, dbuser, dbhost, dbport, idleConn, maxConn, host, port, brokersList, topicsList)
+	fmt.Printf("\nAPP NAME: %s\nENV: %s\nDB NAME: %s\nDB USER: %s\nDB HOST: %s\nDB PORT: %s\nDB IDLE CONN: %d\nDB MAX CONN: %d\nHOST: %s\nPORT: %s\nBROKERS:%v\nTOPICS:%v", appName, env, dbname, dbuser, dbhost, dbport, idleConn, maxConn, host, port, brokersList, topicsList)
 }
