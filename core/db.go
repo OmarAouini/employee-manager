@@ -26,5 +26,6 @@ func Migrate() {
 	DB.AutoMigrate(
 		&Company{},
 		&Project{},
+		&Employee{},
 	)
 }
