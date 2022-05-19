@@ -36,21 +36,3 @@ func (s *Server) GetCompanies(c *fiber.Ctx) error {
 	}
 	return c.Status(200).JSON(okReponse(nil, cust))
 }
-
-// func (s *Server) GetCustomerByApiKey(c *fiber.Ctx) error {
-
-// 	type byApiKeyRequest struct {
-// 		Apikey string `json:"api_key"`
-// 	}
-// 	var requestBody byApiKeyRequest
-
-// 	if err := c.BodyParser(&requestBody); err != nil {
-// 		return c.Status(400).JSON(errorReponse(err.Error()))
-// 	}
-
-// 	cust, err := s.Core.GetCustomerByApiKey(requestBody.Apikey)
-// 	if err != nil {
-// 		return c.Status(500).JSON(errorReponse(err.Error()))
-// 	}
-// 	return c.Status(200).JSON(okReponse("OK", cust))
-// }
