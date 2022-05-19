@@ -25,5 +25,6 @@ func ConnectDb(username string, password string, host string, port string, dbnam
 func Migrate() {
 	DB.AutoMigrate(
 		&Company{},
+		&Project{},
 	)
 }
